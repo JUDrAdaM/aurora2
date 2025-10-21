@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +81,48 @@ const ThemeSwitcher = () => {
 
 export default function Footer({ copyrightText }) {
   return (
-    <footer className="flex flex-col items-center py-16">
-      <p className="mb-3 font-bold uppercase dark:text-white opacity-60">
-        {copyrightText}
-      </p>
-      <ThemeSwitcher />
+    <footer className="relative z-10 py-16 border-t border-white/10">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <p className="text-2xl font-bold neon-text-cyan mb-2">Aurora</p>
+            <p className="text-gray-400">{copyrightText}</p>
+          </div>
+          
+          <div className="flex gap-8">
+            <div>
+              <h4 className="font-bold text-white mb-3">Product</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Features</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">FAQ</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-white mb-3">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-pink-400 transition-colors">About</a></li>
+                <li><Link href="/blog" className="hover:text-pink-400 transition-colors">Blog</Link></li>
+                <li><a href="#" className="hover:text-pink-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-white mb-3">Connect</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-purple-400 transition-colors">Twitter</a></li>
+                <li><a href="#" className="hover:text-purple-400 transition-colors">GitHub</a></li>
+                <li><a href="#" className="hover:text-purple-400 transition-colors">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+          <p>Made with ❤️ using Next.js and Tailwind CSS</p>
+        </div>
+      </div>
     </footer>
   );
 }
