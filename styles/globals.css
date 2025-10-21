@@ -2,11 +2,11 @@
 @plugin '@tailwindcss/typography';
 
 @theme static {
-  --color-primary: var(--theme-primary);
-  --color-gradient-1: var(--theme-gradient-1);
-  --color-gradient-2: var(--theme-gradient-2);
-  --color-gradient-3: var(--theme-gradient-3);
-  --color-gradient-4: var(--theme-gradient-4);
+  --color-primary: #a855f7;
+  --color-gradient-1: #7c3aed;
+  --color-gradient-2: #a855f7;
+  --color-gradient-3: #c084fc;
+  --color-gradient-4: #e9d5ff;
   --font-primary: var(--theme-headings);
   --font-secondary: var(--theme-body);
 }
@@ -25,5 +25,79 @@
 
   body {
     font-family: var(--font-secondary);
+    background: #0a0118;
+    color: #f3e8ff;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(30, 13, 56, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .neon-text {
+    color: #e9d5ff;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8),
+                 0 0 20px rgba(168, 85, 247, 0.6),
+                 0 0 30px rgba(168, 85, 247, 0.4);
+  }
+
+  .neon-border {
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
+                inset 0 0 10px rgba(168, 85, 247, 0.2);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6),
+                0 0 40px rgba(168, 85, 247, 0.4),
+                0 0 60px rgba(168, 85, 247, 0.2);
+  }
+
+  .btn-neon {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border: 2px solid #c084fc;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-neon:hover {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8),
+                0 0 60px rgba(168, 85, 247, 0.5),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .input-glass {
+    background: rgba(30, 13, 56, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .input-glass:focus {
+    background: rgba(30, 13, 56, 0.6);
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2),
+                inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
   }
 }
