@@ -45,7 +45,7 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
   }
   
   .glass-hover {
@@ -60,37 +60,27 @@
   
   .neon-text-cyan {
     color: var(--neon-cyan);
-    text-shadow: 0 0 10px var(--neon-cyan),
-                 0 0 20px var(--neon-cyan),
-                 0 0 40px var(--neon-cyan);
+    text-shadow: 0 0 5px var(--neon-cyan);
   }
   
   .neon-text-pink {
     color: var(--neon-pink);
-    text-shadow: 0 0 10px var(--neon-pink),
-                 0 0 20px var(--neon-pink),
-                 0 0 40px var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
   }
   
   .neon-text-purple {
     color: var(--neon-purple);
-    text-shadow: 0 0 10px var(--neon-purple),
-                 0 0 20px var(--neon-purple),
-                 0 0 40px var(--neon-purple);
+    text-shadow: 0 0 5px var(--neon-purple);
   }
   
   .neon-border-cyan {
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 5px var(--neon-cyan),
-                0 0 10px var(--neon-cyan),
-                inset 0 0 5px var(--neon-cyan);
+    box-shadow: 0 0 3px var(--neon-cyan);
   }
   
   .neon-border-pink {
     border-color: var(--neon-pink);
-    box-shadow: 0 0 5px var(--neon-pink),
-                0 0 10px var(--neon-pink),
-                inset 0 0 5px var(--neon-pink);
+    box-shadow: 0 0 3px var(--neon-pink);
   }
   
   .neon-btn {
@@ -123,7 +113,7 @@
   
   .neon-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 20px currentColor;
+    box-shadow: 0 0 10px currentColor;
   }
   
   .gradient-bg {
