@@ -16,14 +16,7 @@ export function GradientBackground({ variant, className }) {
 
 export default function Layout({ children }) {
   const setAppTheme = () => {
-    const darkMode = localStorage.getItem('theme') === 'dark';
-    const lightMode = localStorage.getItem('theme') === 'light';
-
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else if (lightMode) {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.add('dark');
     return;
   };
 
@@ -50,10 +43,8 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative pb-24 overflow-hidden">
-      <div className="flex flex-col items-center w-full max-w-2xl mx-auto">
-        {children}
-      </div>
+    <div className="relative min-h-screen overflow-hidden" style={{ background: '#0a0a0f' }}>
+      {children}
     </div>
   );
 }
